@@ -1,8 +1,12 @@
-<footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.Home.Permalink }}" >
-    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
-  </a>
-    <div>{{ partialCached "social/follow.html" . }}</div>
+<footer class="{{ .Site.Params.background_color_class | default "bg-mc-peach" }} bottom-0 w-100" role="contentinfo">
+  <div style="margin: 0 auto; max-width: 54em; width: 54em; padding: 1rem;">
+    <div class="bt">
+      <div class="flex justify-between">
+        <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.Home.Permalink }}" >
+          &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+        </a>
+        <div>{{ partialCached "social/follow.html" . }}</div>
+      </div>
+    </div>
   </div>
 </footer>
